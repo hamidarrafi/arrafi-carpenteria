@@ -10,38 +10,71 @@
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background-color: #f4f4f4;
+      background-color: #f8f8f8;
       color: #333;
     }
     header {
-      background-color: #1f1f1f;
-      color: white;
-      padding: 1.5rem;
+      background-color: #1e1e1e;
+      color: #fff;
+      padding: 2rem;
       text-align: center;
     }
     nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
       margin-top: 1rem;
     }
     nav a {
       color: white;
+      margin: 0 1rem;
       text-decoration: none;
       font-weight: bold;
     }
     section {
       max-width: 1000px;
       margin: 2rem auto;
-      padding: 1rem;
       background-color: white;
+      padding: 2rem;
       border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
     h2 {
-      color: #1f1f1f;
+      color: #1e1e1e;
+      margin-top: 0;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    input, textarea {
+      margin-bottom: 1rem;
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    button {
+      padding: 0.8rem;
+      background-color: #1e1e1e;
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 4px;
     }
     footer {
-      background-color: #1f1f1f;
+      background-color: #1e1e1e;
       color: white;
       text-align: center;
       padding: 1rem;
@@ -63,29 +96,40 @@
 
   <section id="chi-siamo">
     <h2>Chi Siamo</h2>
-    <p>Con anni di esperienza nel settore della carpenteria metallica, Carpenteria Arrafi offre soluzioni robuste, sicure e su misura per ogni esigenza strutturale. La nostra squadra è composta da professionisti qualificati, pronti a seguire ogni progetto dalla progettazione al montaggio.</p>
+    <p>Siamo un'azienda specializzata nella carpenteria metallica, con una lunga esperienza nel realizzare strutture solide, sicure e su misura. Operiamo con professionalità, precisione e rispetto delle normative di sicurezza, garantendo sempre la massima soddisfazione del cliente.</p>
   </section>
 
   <section id="servizi">
     <h2>Servizi</h2>
     <ul>
-      <li>Progettazione strutture metalliche</li>
-      <li>Realizzazione e lavorazione carpenteria in ferro</li>
-      <li>Montaggio strutture in loco</li>
-      <li>Manutenzione e riparazione strutture esistenti</li>
+      <li>Progettazione e realizzazione strutture in ferro</li>
+      <li>Montaggio strutture industriali e civili</li>
+      <li>Riparazione e manutenzione carpenteria</li>
+      <li>Scale, pensiline, soppalchi, cancelli e recinzioni</li>
     </ul>
   </section>
 
   <section id="portfolio">
     <h2>Portfolio</h2>
-    <p>Alcuni dei nostri progetti includono capannoni industriali, scale in ferro, pensiline, soppalchi e strutture su misura per clienti privati e aziende.</p>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/300x200?text=Lavoro+1" alt="Lavoro 1">
+      <img src="https://via.placeholder.com/300x200?text=Lavoro+2" alt="Lavoro 2">
+      <img src="https://via.placeholder.com/300x200?text=Lavoro+3" alt="Lavoro 3">
+      <img src="https://via.placeholder.com/300x200?text=Lavoro+4" alt="Lavoro 4">
+    </div>
   </section>
 
   <section id="contatti">
     <h2>Contatti</h2>
+    <form>
+      <input type="text" name="nome" placeholder="Il tuo nome" required />
+      <input type="email" name="email" placeholder="La tua email" required />
+      <textarea name="messaggio" placeholder="Il tuo messaggio" rows="5" required></textarea>
+      <button type="submit">Invia Messaggio</button>
+    </form>
     <p>Email: info@carpenteriaarrafi.it</p>
     <p>Telefono: +39 333 1234567</p>
-    <p>Sede: Via delle Industrie 10, 00100 Roma</p>
+    <p>Sede: Via delle Industrie 10, Roma</p>
   </section>
 
   <footer>
